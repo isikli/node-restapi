@@ -6,9 +6,6 @@ const books = require('./routes/books');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 3001;
-console.log(`Example app listening on port ${port}!`)
-
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
