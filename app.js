@@ -18,11 +18,6 @@ app.use('/books', books);
 
 sequelize.sync({
     force: true
-}).then (() => {
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-}).catch(function(err) {
-    // print the error details
-    console.log(err);
 });
 
 module.exports = app;
