@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize');
-const sequelize = require('./sequelize');
+const Sequelize = require('sequelize')
+const sequelize = require('./sequelize')
 
 const Book = sequelize.define('book', {
   // attributes
@@ -9,6 +9,6 @@ const Book = sequelize.define('book', {
   }
 }, {
   // options
-});
+})
 
 module.exports = Book

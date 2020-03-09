@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize');
-const sequelize = require('./sequelize');
+const Sequelize = require('sequelize')
+const sequelize = require('./sequelize')
 
 const Author = sequelize.define('author', {
   // attributes
@@ -13,6 +13,6 @@ const Author = sequelize.define('author', {
   }
 }, {
   // options
-});
+})
 
 module.exports = Author

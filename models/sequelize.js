@@ -1,23 +1,22 @@
-const Sequelize = require('sequelize');
+const Sequelize = require('sequelize')
 
-
-let sequelize;
+let sequelize
 if (process.env.DATABASE_URL) {
   sequelize = new Sequelize(process.env.DATABASE_URL, {
-    dialect: 'postgres',
-  });
+    dialect: 'postgres'
+  })
 } else {
   sequelize = new Sequelize('mydb', 'alii', 'alii', {
-  dialect:'postgres'
-});
+    dialect: 'postgres'
+  })
 }
 sequelize
   .authenticate()
   .then(() => {
-    console.log('Connection has been established successfully.');
+    console.log('Connection has been established successfully.')
   })
   .catch(err => {
-    console.error('Unable to connect to the database:', err);
-  });
+    console.error('Unable to connect to the database:', err)
+  })
 
 module.exports = sequelize
